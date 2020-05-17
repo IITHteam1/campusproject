@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.campusproject">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".AdminMapActivity"></activity>
+        <activity android:name=".NavigationActivity" />
+        <activity android:name=".ViewIssuesActivity" />
+        <activity android:name=".CampusActivity" />
+        <activity android:name=".AdminManageActivity" />
+        <activity android:name=".AdminLoginActivity" />
+        <activity android:name=".RaiseIssueActivity" />
+        <activity android:name=".AddLocationActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="p2jiQnd1CFtEiiOjnX1y" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="TXRIZ3eE390Yzu7ioy-pMw" />
+        <meta-data
+            android:name="com.here.android.maps.license.key"
+            android:value="bZC0WllgFkY17V/Ibbp4nGkgs6qvDJhVVVkYEZt4v8Jlz3ssDd5zj0g6Jv1m74lIkf3wXs4rEKnk3d5dr79rMZ0gPqGW9HyYmfbOMj6IeGUvbWC8oO267v4vmZoiv1xIarjAdIJ14b4F48OgJyB9bKOSyUQqRHnQIBW7Up0yskFHeIMiIUFEp6q0ldog0zQnto2LfQPzARCWr95Kk1KfLNw+qkfwgdv/bZ3JoiNhwlu1G6QsqRRazX1zLtsFO6OEuxe2ljAOa+Hg7KPqvFAOyYmQv+wjQ0GOQkmnyfFvSr3DWTadGv6E1wj9evV2T63X0bhWpGBoxMCqvm2qaH6gDtNc8XJCqjUyDa/hIwX8pG4dQggWKNwwIm7vKQt01QVQh70ui6ycT/cInZB9hfTPw3VeYZLLSKMrpaLkT+oaA9+lQZ/kbmGv4sHwxtpwJ0oRTnx1J+DSz7RaaT2S+hkuivoJmTVr9C2aSYMkJ9t6dnq1HDXFTJXoZ5uIpuEYUsJIBPODfYL0wiX5KERtJCj5tlizr2W4Ajbpdnl9UIWXRKFJPDNDddeqywKeO7UhI3NvjGNux5kbyij5gYUmtbArC4uk//b4hvLL0Doj5246D7qTCBnKUs+KMldDBkcq9G04CTEHGH3ZRW4bGOyOFMTsqMuT433z1Q8R70Xg5tnOzxM=" />
+        <meta-data
+            android:name="com.here.sdk.access_key_secret"
+            android:value="TNaJMtF8l4JLsEG1SuHJZFr8hCUwvEM94ISJH5njY0YeM25AssoyOxPgaOU99DMHJBFOPO5-x4PaLX8Fj5Cqpw" />
+        <meta-data
+            android:name="com.here.sdk.access_key_id"
+            android:value="5knsFZvzo1IWzg95OeqdaQ" />
+
+        <service
+            android:name="com.here.android.mpa.service.MapService"
+            android:label="HereMapService">
+            <intent-filter>
+
+                <!-- Note, action name should not be changed. -->
+                <action android:name="com.here.android.mpa.service.MapService.v3" />
+            </intent-filter>
+        </service>
+        <service android:name=".utils.ForegroundService" />
+    </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+</manifest>
